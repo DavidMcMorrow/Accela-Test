@@ -25,5 +25,5 @@ David
 
 
 On another note:
-During the test I was called up for a Covid-19 Vaccine from my local GP as I had put myself on the cancelation list. So from about 12:45 to 13:25 I was in the doctors getting the vaccine, hence why it took me longer than expected. I can provide a cert, if this effects more score in the test.
+During the test I was called up for a Covid-19 Vaccine from my local GP as I had put myself on the cancelation list. So from about 12:45 to 13:25 I was in the doctors getting the vaccine, hence why it took me longer than expected. I can provide a cert, if this effects my score in the test.
 
