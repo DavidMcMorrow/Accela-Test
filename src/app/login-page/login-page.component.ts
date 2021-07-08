@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppServiceService } from '../app-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -8,7 +9,7 @@ import { AppServiceService } from '../app-service.service';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private appService:AppServiceService) { }
+  constructor(private route:Router, private appService:AppServiceService) { }
 
   email: any;
   getUsersURL : string = "https://jsonplaceholder.typicode.com/users"
@@ -22,6 +23,7 @@ export class LoginPageComponent implements OnInit {
     this.userData.forEach((element: any) => {
       if (element.email == this.email) {
         this.appService.userInfo = element
+        this.route.navigate(['content-component'])
       }
     });
     console.log("userData", this.userData);
