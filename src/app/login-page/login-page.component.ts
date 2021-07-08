@@ -24,5 +24,7 @@ export class LoginPageComponent implements OnInit {
         this.appService.userInfo = element
       }
     });
+    console.log("userData", this.userData);
+    
   }
 }
