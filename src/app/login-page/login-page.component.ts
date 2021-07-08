@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AppServiceService } from '../app-service.service';
 
 @Component({
   selector: 'app-login-page',
@@ -8,15 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService:AppServiceService) { }
 
   email: any;
+  getUsersURL : string = "https://jsonplaceholder.typicode.com/users"
+  userData : any
 
   ngOnInit(): void {
-    console.log("opened");
+    this.appService.getRequest(this.getUsersURL).subscribe(data => this.userData = data)
   }
 
   tempButton() {
-    console.log("clicked");
+    this.userData.forEach((element: any) => {
+      if (element.email == this.email) {
+        this.appService.userInfo = element
+      }
+    });
   }
 }
