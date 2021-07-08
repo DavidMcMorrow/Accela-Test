@@ -1,5 +1,18 @@
-<mat-tab-group mat-align-tabs="start">
+<mat-tab-group mat-align-tabs="center">
     <mat-tab label="User Posts">
+        <button style="margin-left: 20px" (click)="addingNewPost()">Add new post</button>
+        <div *ngIf="addingNewPostBoolean">
+            <b>Title</b>
+            <br>
+            <textarea [(ngModel)]="title" rows="1" cols="100" ></textarea>
+            <br>
+            <b>Body</b>
+            <br>
+            <textarea [(ngModel)]="body" rows="3" cols="100" ></textarea>
+            <br>
+            <button (click)="cancel()">Cancel</button>
+            <button (click)="addNewPost()">Add</button>
+        </div>
         <div *ngFor="let upost of userPosts">
             <mat-card class="mat-card-class"> 
                 <mat-card-title class="mat-card-title-class">{{upost.title}}</mat-card-title>

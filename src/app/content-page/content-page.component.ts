@@ -15,6 +15,9 @@ export class ContentPageComponent implements OnInit {
   allPosts : any = []
   allUserInfo : any = []
   personalPostBoolean : boolean = true
+  addingNewPostBoolean : boolean = false
+  title : any
+  body : any
   
 
   ngOnInit(): void {
@@ -26,9 +29,13 @@ export class ContentPageComponent implements OnInit {
     console.log("this.userPost", this.userPosts);
     console.log("this.otherPosts", this.otherPosts)
     this.personalPostBoolean = true
+    console.log("length", this.appService.allPosts.length);
+    
   }
 
   seperatingPosts(userID : any){
+    this.userPosts = []
+    this.otherPosts = []
     for (let index = 0; index < this.allPosts.length; index++) {
       const element = this.allPosts[index];
       if (element.userId == userID) {
@@ -40,13 +47,32 @@ export class ContentPageComponent implements OnInit {
     }
   }
 
-  displayingPosts(type : any){
-    if (type == "User") {
-      this.personalPostBoolean = true
-    } else{
-      this.personalPostBoolean = false
+  addingNewPost(){
+    this.addingNewPostBoolean = true
+  }
+
+  cancel(){
+    this.addingNewPostBoolean = false
+    this.title = ""
+    this.body = ""
+  }
+
+  addNewPost(){
+    let newUserID = this.appService.userInfo.id
+    let newTitle = this.title
+    let newBody = this.body
+    let newPostID = this.appService.allPosts[this.appService.allPosts.length - 1].id + 1
+
+    let object = {
+      userId: newUserID,
+      id: newPostID,
+      title: newTitle,
+      body: newBody,
     }
     
+    this.allPosts.push(object)
+    
+    this.seperatingPosts(this.appService.userInfo.id)
+    this.cancel()
   }
-  
 }
