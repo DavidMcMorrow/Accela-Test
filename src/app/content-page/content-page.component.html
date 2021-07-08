@@ -1,1 +1,30 @@
-<p>content-page works!</p>
+<div class="tabs">
+    <button (click)="displayingPosts('User')">User Posts</button>
+    <button (click)="displayingPosts('Other')">Other Posts</button>
+</div>
+<div *ngIf="personalPostBoolean">
+    <div *ngFor="let upost of userPosts">
+        <mat-card class="mat-card-class"> 
+            <mat-card-title class="mat-card-title-class">{{upost.title}}</mat-card-title>
+            <mat-card-content>
+                <p>
+                    {{upost.body}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div *ngIf="!personalPostBoolean">
+    <div *ngFor="let opost of otherPosts">
+        <mat-card class="mat-card-class">
+            <!-- <mat-card-title>{{gettingUserName(opost)}}</mat-card-title> -->
+            <mat-card-title class="username-on-cards">{{allUserInfo[opost.userId-1].name}}</mat-card-title>
+            <mat-card-subtitle class="mat-card-title-class">{{opost.body}}</mat-card-subtitle>
+            <mat-card-content>
+                <p>
+                    {{opost.title}}
+                </p>
+            </mat-card-content>
+        </mat-card> 
+    </div>
+</div>

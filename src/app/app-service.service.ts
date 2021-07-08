@@ -10,6 +10,7 @@ export class AppServiceService {
 
   userInfo : any
   allPosts : any
+  allUsersInfo : any
 
   getRequest(url : string){
     console.log("hello");

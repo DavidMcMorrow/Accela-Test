@@ -25,7 +25,7 @@ export class LoginPageComponent implements OnInit {
     this.userData.forEach((element: any) => {
       if (element.email == this.email) {
         this.appService.userInfo = element
-        
+        this.appService.allUsersInfo = this.userData
         this.route.navigate(['content-component'])
       }
     });
