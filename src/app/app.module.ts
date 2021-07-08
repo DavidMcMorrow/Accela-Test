@@ -8,7 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common'; 
 import { ContentPageComponent } from './content-page/content-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     MatCardModule,
     BrowserAnimationsModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
