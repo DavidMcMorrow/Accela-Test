@@ -13,7 +13,7 @@ export class AppServiceService {
   allUsersInfo : any
 
   getRequest(url : string){
-    console.log("hello");
+  
     return this.http.get(url)
   }
 }

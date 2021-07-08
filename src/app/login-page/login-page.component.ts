@@ -29,7 +29,7 @@ export class LoginPageComponent implements OnInit {
         this.route.navigate(['content-component'])
       }
     });
-    console.log("userData", this.userData);
+    
     
   }
 }

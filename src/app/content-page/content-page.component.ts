@@ -21,15 +21,14 @@ export class ContentPageComponent implements OnInit {
   
 
   ngOnInit(): void {
-    console.log("this.appService.usersInfo", this.appService.userInfo);
+    
     this.allPosts = this.appService.allPosts
     this.allUserInfo = this.appService.allUsersInfo
-    console.log("this.appService.allPosts", this.appService.allPosts);
+    
     this.seperatingPosts(this.appService.userInfo.id)
-    console.log("this.userPost", this.userPosts);
-    console.log("this.otherPosts", this.otherPosts)
+   
     this.personalPostBoolean = true
-    console.log("length", this.appService.allPosts.length);
+    
     
   }
 
