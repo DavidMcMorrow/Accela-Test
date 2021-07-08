@@ -1,1 +1,5 @@
-<p>login-page works!</p>
+<div class="login-page">
+    <h1>Login Page</h1>
+    <input id="login-textbox" [(ngModel)]="email" type="email" (keyup.enter)="tempButton()">
+    <button id="login-button" (click)="tempButton()">Log in</button>
+</div>
