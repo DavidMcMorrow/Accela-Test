@@ -1,27 +1,24 @@
-# AccelaTest
+I developed the project using Angular 8.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+In order to run the project you must first make the sure Angular is installed on the machine and in the project.
 
-## Development server
+In addition for the tabs and cards on the content page I used angular material, to install this you must run the command
+  ng add @angular material
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+For the most part I focused on the functionality of what had to be done rather than the design.
+I feel I hit all of the key points:
+  1. User must enter an email address that is in the list of users to proceed to the next ("content") page
+  2. User can see all their posts and by moving tab can see other users posts
+  3. Users can add posts
 
-## Code scaffolding
+Unfortnately, I didn't have time to unit test any of my functions although I would of done this through Karma.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I think the biggest thing I missed out on was the validation on the login page.
+So if the user enters an incorrect email address they are not informed as to why they cannot move to the next page.
+It also isn't ensured that what is entered is a valid email.
+Had I had more time I would of used Angular forms to handle the validation.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+On another note:
+During the test I was called up for a Covid-19 Vaccine from my local GP as I had put myself on the cancelation list. So from about 12:45 to 13:25 I was in the doctors getting the vaccine, hence why it took me longer than expected. I can provide a cert, if this effects more score in the test.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
