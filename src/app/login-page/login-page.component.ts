@@ -13,16 +13,19 @@ export class LoginPageComponent implements OnInit {
 
   email: any;
   getUsersURL : string = "https://jsonplaceholder.typicode.com/users"
+  getPostsURL : string = "https://jsonplaceholder.typicode.com/posts"
   userData : any
 
   ngOnInit(): void {
     this.appService.getRequest(this.getUsersURL).subscribe(data => this.userData = data)
+    this.appService.getRequest(this.getPostsURL).subscribe(data => this.appService.allPosts = data)
   }
 
   tempButton() {
     this.userData.forEach((element: any) => {
       if (element.email == this.email) {
         this.appService.userInfo = element
+        
         this.route.navigate(['content-component'])
       }
     });

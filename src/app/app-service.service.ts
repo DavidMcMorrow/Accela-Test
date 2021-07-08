@@ -9,6 +9,7 @@ export class AppServiceService {
   constructor(private http: HttpClient) { }
 
   userInfo : any
+  allPosts : any
 
   getRequest(url : string){
     console.log("hello");
