@@ -18,6 +18,11 @@ So if the user enters an incorrect email address they are not informed as to why
 It also isn't ensured that what is entered is a valid email.
 Had I had more time I would of used Angular forms to handle the validation.
 
+Lastly, I would of improved the design as well. I would of used Angular material forms and buttons to improve the overall look of the application.
+
+Thanks for taking the time to review my work
+David
+
 
 On another note:
 During the test I was called up for a Covid-19 Vaccine from my local GP as I had put myself on the cancelation list. So from about 12:45 to 13:25 I was in the doctors getting the vaccine, hence why it took me longer than expected. I can provide a cert, if this effects more score in the test.
