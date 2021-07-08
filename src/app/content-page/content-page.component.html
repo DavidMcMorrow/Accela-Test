@@ -1,7 +1,7 @@
 <mat-tab-group mat-align-tabs="center">
     <mat-tab label="User Posts">
         <button style="margin-left: 20px" (click)="addingNewPost()">Add new post</button>
-        <div *ngIf="addingNewPostBoolean">
+        <div class="adding-new-posts" *ngIf="addingNewPostBoolean">
             <b>Title</b>
             <br>
             <textarea [(ngModel)]="title" rows="1" cols="100" ></textarea>
